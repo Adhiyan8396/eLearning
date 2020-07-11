@@ -212,7 +212,9 @@
     }
     
     table {
-        border-collapse: collapse;
+        border-collapse: separate;
+        border-spacing: 1em;
+        text-align: center;
     }
     
     caption {
@@ -1996,27 +1998,27 @@
     }
     
     .form-control::-webkit-input-placeholder {
-        color: #6c757d;
+        color: #22221c;
         opacity: 1;
     }
     
     .form-control::-moz-placeholder {
-        color: #6c757d;
+        color: #22221c;
         opacity: 1;
     }
     
     .form-control:-ms-input-placeholder {
-        color: #6c757d;
+        color: #22221c;
         opacity: 1;
     }
     
     .form-control::-ms-input-placeholder {
-        color: #6c757d;
+        color: #22221c;
         opacity: 1;
     }
     
     .form-control::placeholder {
-        color: #6c757d;
+        color: #22221c;
         opacity: 1;
     }
     
@@ -3419,16 +3421,17 @@
         background-color: transparent;
         border: 0;
     }
-    
-    .dropdown-item:hover,
+    /* .dropdown-item:hover,
     .dropdown-item:focus {
         color: #16181b;
         text-decoration: none;
         background-color: #f8f9fa;
-    }
+    } */
     
     .dropdown-item.active,
-    .dropdown-item:active {
+    .dropdown-item:active,
+    .dropdown-item:hover,
+    .dropdown-item:focus {
         color: #fff;
         text-decoration: none;
         background-color: #f4623a;
@@ -4286,7 +4289,7 @@
     
     .nav-tabs .nav-link.active,
     .nav-tabs .nav-item.show .nav-link {
-        color: #495057;
+        color: #22221c;
         background-color: #fff;
         border-color: #dee2e6 #dee2e6 #fff;
     }
@@ -4749,7 +4752,7 @@
         word-wrap: break-word;
         background-color: #fff;
         background-clip: border-box;
-        border: 1px solid rgba(0, 0, 0, 0.125);
+        /* border: 1px solid rgba(0, 0, 0, 0.125); */
         border-radius: 0.25rem;
     }
     
@@ -4778,7 +4781,7 @@
     .card-body {
         flex: 1 1 auto;
         min-height: 1px;
-        padding: 1.25rem;
+        padding: 100px 0;
     }
     
     .card-title {
@@ -4805,8 +4808,8 @@
     .card-header {
         /* padding: 0.75rem 1.25rem; */
         margin-bottom: 0;
-        background-color: rgba(0, 0, 0, 0.03);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        /* background-color: rgba(0, 0, 0, 0.03);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125); */
     }
     
     .card-header:first-child {
@@ -6016,15 +6019,14 @@
     }
     
     .modal-content {
+        height: 499px;
         position: relative;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: auto;
         pointer-events: auto;
-        background-color: #fff;
+        background-color: transparent;
         background-clip: padding-box;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        border-radius: 0.3rem;
         outline: 0;
     }
     
@@ -8096,7 +8098,7 @@
     
     .mb-5,
     .my-5 {
-        margin-bottom: 3rem !important;
+        margin-bottom: 2rem !important;
     }
     
     .ml-5,
@@ -9816,7 +9818,7 @@
     
     .text-center {
         text-align: center !important;
-        padding-bottom: 25px;
+        /* padding-bottom: 25px; */
     }
     
     @media (min-width: 576px) {
@@ -10132,7 +10134,7 @@
     }
     
     .page-section {
-        padding: 3rem 0;
+        padding: 2rem 0;
         height: 550px;
     }
     
@@ -10158,7 +10160,7 @@
     
     #mainNav .navbar-nav .nav-item .nav-link:hover,
     #mainNav .navbar-nav .nav-item .nav-link:active {
-        color: #f4623a;
+        color: #f4623a !important;
     }
     
     #mainNav .navbar-nav .nav-item .nav-link.active {
@@ -10177,7 +10179,7 @@
             color: #fff;
         }
         #mainNav .navbar-nav .nav-item .nav-link {
-            color: rgba(255, 255, 255, 0.7);
+            color: #22221c;
             padding: 0 1rem;
         }
         #mainNav .navbar-nav .nav-item .nav-link:hover {
@@ -10207,7 +10209,7 @@
     header.masthead {
         padding-top: 10rem;
         padding-bottom: calc(10rem - 4.5rem);
-        background: linear-gradient(to bottom, rgba(76, 92, 169, 0.8) 0%, rgba(244, 98, 58, 0.25) 100%), url("../assets/img/bg-masthead.jpg");
+        background: url("../assets/img/bg-masthead.png");
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: scroll;
@@ -10326,7 +10328,6 @@
     
     .box-comments .comment-text {
         margin-left: 40px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: #555;
     }
     
@@ -10397,4 +10398,147 @@
         display: table-cell;
         text-align: center;
         vertical-align: bottom;
+    }
+    
+    .accordion {
+        text-align: center;
+    }
+    
+    .accordion.width {
+        display: flex;
+        width: 200px;
+    }
+    
+    .accordion.width .card {
+        flex-direction: row;
+        min-width: min-content;
+    }
+    
+    .accordion.width .card .card-header {
+        cursor: pointer;
+        transform: rotate(180deg);
+        writing-mode: vertical-rl;
+    }
+    
+    .card-body {
+        width: 400px !important;
+    }
+    
+    .collapsing.width {
+        transition: width 0.5s ease;
+        height: auto;
+        width: 10px;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    
+    .text_style {
+        font-family: Merriweather Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    }
+    
+    .bg_img {
+        background: url("../assets/img/login_v1.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        /* background-size: cover; */
+        object-fit: cover;
+    }
+    
+    .text_box_transparent {
+        background-color: #ffffff;
+        opacity: 0.6;
+    }
+    
+    .beginner_basic {
+        width: 250px;
+        height: 400px;
+        background-image: url('../assets/img/pricing/P1_1.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .beginner_standard {
+        width: 250px;
+        height: 400px;
+        background-image: url('../assets/img/pricing/P1_2.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .beginner_premium {
+        width: 250px;
+        height: 400px;
+        background-image: url('../assets/img/pricing/P1_3.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .intermediate_basic {
+        width: 250px;
+        height: 400px;
+        background-image: url('../assets/img/pricing/P2_1.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .intermediate_standard {
+        width: 250px;
+        height: 400px;
+        background-image: url('../assets/img/pricing/P2_2.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .intermediate_premium {
+        width: 250px;
+        height: 400px;
+        background-image: url('../assets/img/pricing/P2_3.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .advanced_basic {
+        width: 250px;
+        height: 400px;
+        background-image: url('../assets/img/pricing/P3_1.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .advanced_standard {
+        width: 250px;
+        height: 400px;
+        background-image: url('../assets/img/pricing/P3_2.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .advanced_premium {
+        width: 250px;
+        height: 400px;
+        background-image: url('../assets/img/pricing/P3_3.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .contact {
+        padding-bottom: calc(10rem - 4.5rem);
+        background: url("../assets/img/contact_us.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
     }

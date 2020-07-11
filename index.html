@@ -9,64 +9,43 @@
     <title>Kids eLearning</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-        .accordion {
-            text-align: center;
-        }
-        
-        .accordion.width {
-            display: flex;
-            width: 200px;
-        }
-        
-        .accordion.width .card {
-            flex-direction: row;
-            min-width: min-content;
-        }
-        
-        .accordion.width .card .card-header {
-            cursor: pointer;
-            transform: rotate(180deg);
-            writing-mode: vertical-rl;
-        }
-        
-        .card-body {
-            width: 400px !important;
-        }
-        
-        .collapsing.width {
-            transition: width 0.5s ease;
-            height: auto;
-            width: 10px;
-        }
-    </style>
 
+    </style>
+    <script>
+    </script>
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <img src="assets/img/Logo.png" alt="Kids eLearning">
+            <a class="navbar-brand js-scroll-trigger" href="index.html">
+                <img src="assets/img/Logo_v3.png" alt="Kids eLearning">
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">How eLearning works?</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#products">Our Products</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger text_style" href="#about">How eLearning works?</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger text_style" href="#products">Our Products</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text_style" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true">
+                          Pricing
+                        </a>
+                        <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item text_style" href="pricing.html">Beginner</a>
+                            <a class="dropdown-item text_style" href="pricing.html#intermediate">Intermediate</a>
+                            <a class="dropdown-item text_style" href="pricing.html#advanced">Advanced</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger text_style" href="#contact">Contact</a></li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#">
-                            <button type="button" class="btn btn-warning">Login</button>
+                            <button type="button" class="btn btn-secondary text_style" data-toggle="modal" data-target="#myModal">Login</button>
                         </a>
                     </li>
                 </ul>
@@ -78,23 +57,24 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
-                    <h1 class="text-uppercase text-white font-weight-bold">Welcome to kids eLearning</h1>
-                    <hr class="divider my-4" />
+                    <!-- <h1 class="text-uppercase text-white font-weight-bold">Welcome to kids eLearning</h1>
+                    <hr class="divider my-4" /> -->
                 </div>
-                <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 font-weight-light mb-5">A eLearning portal is a gateway to all the courses, resources, and instruments that facilitate teaching and learning. Technically speaking, it's a website that acts as a repository for teaching and learning materials.</p>
+                <div class="col-lg-8" style="padding-top: 400px;">
+                    <p class="font-weight-light mb-5 text_style">A eLearning portal is a gateway to all the courses, resources, and instruments that facilitate teaching and learning. Technically speaking, it's a website that acts as a repository for teaching and learning materials.</p>
                 </div>
             </div>
         </div>
     </header>
+
     <!-- About-->
     <section class="page-section bg-primary" id="about">
-        <h2 class="text-center mt-0">How eLearning Portal works ?</h2>
+        <h2 class="text-center mt-0 text_style">How eLearning Portal works ?</h2>
 
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <video width="480" height="auto" controls poster="assets/img/about/video_thumbnail.jpg" style="overflow: auto;">
+                    <video width="480" height="auto" controls poster="assets/video/thumbnail/video_thumbnail.jpg" style=" overflow: auto;">
                             <source src="assets/video/what_is_e-learning.mp4" type="video/mp4">Your browser does not support the video tag.
                         </video>
                 </div>
@@ -103,25 +83,26 @@
                         <div class="box-comment">
                             <img class="img-circle img-sm" src="assets/img/about/user1-128x128.jpg" alt="User Image">
 
-                            <div class="comment-text">
-                                <span class="username">Maria Gonzales</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                            <div class="comment-text text_style">
+                                <span class="username">Patti Shank</span> She compares what people say are the benefits of microlearning against what we know from research.</p>
                             </div>
                         </div>
                         <hr>
                         <div class="box-comment">
                             <img class="img-circle img-sm" src="assets/img/about/user4-128x128.jpg" alt="User Image">
 
-                            <div class="comment-text">
-                                <span class="username">Luna Stark</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                            <div class="comment-text text_style">
+                                <span class="username">Angel Green</span> There are a few commonly held Instructional Design beliefs, and these beliefs permeate their way into our eLearning and classroom training courses under the guise of being “instructionally
+                                sound”.
                             </div>
                         </div>
                         <hr>
 
-                        <img class="img-responsive img-circle img-sm" src="assets/img/about/user5-128x128.jpg" alt="Alt Text">
+                        <!-- <img class="img-responsive img-circle img-sm" src="assets/img/about/user5-128x128.jpg" alt="Alt Text">
 
                         <div class="img-push">
                             <input type="text" class="form-control input-sm" placeholder="Press enter to post comment">
-                        </div>
+                        </div> -->
                     </div>
 
                 </div>
@@ -132,75 +113,97 @@
 
     <!-- Products-->
     <section class="page-section" id="products">
-        <div class="container">
+        <div class="container text_style">
             <h2 class="text-center mt-0">Products we serve</h2>
             <div class="accordion width" id="accordionHorizontalExample">
 
                 <div class="card">
-                    <div class="card-header" data-toggle="collapse" data-target="#collapseOne">
-                        <img height="100%" width="100%" src="assets/img/products/product_1.png" style="transform: rotate(180deg); object-fit: cover;" alt="User 1">
+                    <p>
+                        <div class="card-header" data-toggle="collapse" data-target="#collapseOne">
+                            <img height="100%" width="100%" src="assets/img/products/product_1.png" style="transform: rotate(180deg); object-fit: contain;" alt="User 1">
+                        </div>
+                        <div id="collapseOne" class="collapse show width" data-parent="#accordionHorizontalExample" style="background-image: linear-gradient(90deg, #ebf0ec, white);">
+                            <div class="card-body">
+                                <p style="text-align: center;"><b>Logical Games</b></p>
+                                <p>
+                                    <dl>
+                                        <dt>Gravity Maze</dt>
+                                        <dd style="text-align: justify;">- The towers in this game can be arranged in a variety of structures, you'll have to to build a path that will carry your marble to its target.</dd>
+                                    </dl>
+                                </p>
+                            </div>
+                        </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" data-toggle="collapse" data-target="#collapseTwo">
+                        <img height="100%" width="100%" src="assets/img/products/product_2.png" style="transform: rotate(180deg); object-fit: contain;" alt="User 1">
                     </div>
-                    <div id="collapseOne" class="collapse width" data-parent="#accordionHorizontalExample" style="background-color: #bf87a2;">
+                    <div id="collapseTwo" class="collapse width" data-parent="#accordionHorizontalExample" style="background-image: linear-gradient(90deg, #ebf0ec, white);">
                         <div class="card-body">
-                            <p style="text-align: center;"><b>Create a Positive Environment</b></p>
-                            <p style="text-align: justify;">Create a Positive Environment Music can be as powerful a motivator as motivational quotes. Each morning when you wake up, play a few pump up songs before you start your day to get you going. You can listen to playlists with
-                                motivational songs on Spotify to help you get going. By getting your mind in the right mindset, you can inch closer to motivating yourself.</p>
+                            <p style="text-align: center;"><b>Activities</b></p>
+                            <p style="text-align: justify;">
+                                <dl>
+                                    <dt>Fun With Words </dt>
+                                    <dd style="text-align: justify;">-"Fun with Words" is an ideal resource to improve letter recognition, letter sounds and spelling to help children in building their language skills.</dd>
+                                </dl>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header" data-toggle="collapse" data-target="#collapseTwo">
-                        <img height="100%" width="100%" src="assets/img/products/product_2.png" style="transform: rotate(180deg); object-fit: cover;" alt="User 1">
+                    <div class="card-header" data-toggle="collapse" data-target="#collapseThree">
+                        <img height="100%" width="100%" src="assets/img/products/product_3.png" style="transform: rotate(180deg); object-fit: contain;" alt="User 1">
                     </div>
-                    <div id="collapseTwo" class="collapse width" data-parent="#accordionHorizontalExample" style="background-color: #adb3d5;">
+                    <div id="collapseThree" class="collapse width" data-parent="#accordionHorizontalExample" style="background-image: linear-gradient(90deg, #ebf0ec, white);">
                         <div class="card-body">
-                            <p style="text-align: center;"><b>Celebrate Your Small Wins</b></p>
-                            <p style="text-align: justify;">When you think of your BIG goal, sometimes you start feeling overwhelmed. Why? Because big goals don’t get achieved right away. Instead, you need to create mini goals to help excite you along the way. Celebrating your small
-                                wins will help you stay motivated through your journey. Plus, celebrating is always super fun. Maybe you break your goal down to 10 small-sized goals with tasks that get you on track to achieve them.</p>
+                            <p style="text-align: center;"><b>Mathematics</b></p>
+                            <p style="text-align: justify;">
+                                <dl>
+                                    <dt>Math Cubes </dt>
+                                    <dd style="text-align: justify;">- Cubes link together on all sides and feature geometric shape cutouts for more complex patterning activities.</dd>
+                                </dl>
+                            </p>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header" data-toggle="collapse" data-target="#collapseThree">
-                            <img height="100%" width="100%" src="assets/img/products/product_3.png" style="transform: rotate(180deg); object-fit: cover;" alt="User 1">
-                        </div>
-                        <div id="collapseThree" class="collapse width" data-parent="#accordionHorizontalExample" style="background-color: #dbbd56;">
-                            <div class="card-body">
-                                <p style="text-align: center;"><b>Surround Yourself With Motivated People</b></p>
-                                <p style="text-align: justify;"> You need to be around with others who are just ambitious as you. American entrepreneur John Rohn once said, “You’re the average of the five people you spend the most time with it.” And whether or not that’s true is debatable,
-                                    the reality is being around the right kind of people can only help you grow. If you’re surrounded by those who love your ambition, you’ll be more ambitious and achieve more.</p>
-                            </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" data-toggle="collapse" data-target="#collapseFour">
+                        <img height="100%" width="100%" src="assets/img/products/product_4.png" style="transform: rotate(180deg); object-fit: contain;" alt="User 1">
+                    </div>
+                    <div id="collapseFour" class="collapse width" data-parent="#accordionHorizontalExample" style="background-image: linear-gradient(90deg, #ebf0ec, white);">
+                        <div class=" card-body">
+                            <p style="text-align: center;"><b>Language</b></p>
+                            <p style="text-align: justify;">
+                                <dl>
+                                    <dt>Lingo Letter Sounds</dt>
+                                    <dd style="text-align: justify;">- Kids can practice early reading English language skills, while learning Spanish at the same time.</dd>
+                                </dl>
+                            </p>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header" data-toggle="collapse" data-target="#collapseFour">
-                            <img height="100%" width="100%" src="assets/img/products/product_4.png" style="transform: rotate(180deg); object-fit: cover;" alt="User 1">
-                        </div>
-                        <div id="collapseFour" class="collapse width" data-parent="#accordionHorizontalExample" style="background-color: #d39aa3;">
-                            <div class=" card-body">
-                                <p style="text-align: center;"><b>Taking responsibility</b></p>
-                                <p style="text-align: justify;">Practicing 100 percent responsibility every day - is about seeing ourselves not as right or wrong, but as an agent, chooser, problem solver, and learner in the complex interrelationships of our lives so that we can better
-                                    integrate with the people and world around us. When we do this, we enjoy a better and more productive way to live and lead.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" data-toggle="collapse" data-target="#collapseFive">
+                        <img height="100%" width="100%" src="assets/img/products/product_5.png" style="transform: rotate(180deg); object-fit: contain;" alt="User 1">
                     </div>
-                    <div class="card">
-                        <div class="card-header" data-toggle="collapse" data-target="#collapseFive">
-                            <img height="100%" width="100%" src="assets/img/products/product_5.png" style="transform: rotate(180deg); object-fit: cover;" alt="User 1">
-                        </div>
-                        <div id="collapseFive" class="collapse show width" data-parent="#accordionHorizontalExample" style="background-color: #a9ced7;">
-                            <div class="card-body">
-                                <p style="text-align: center;"><b>Simplicity</b></p>
-                                <p style="text-align: justify;">Simplicity requires a two-step process. First, we must invest time and energy to discover what stirs us as human beings, what makes our hearts sing, and what brings us joy. Then, we must proceed to create the life that
-                                    reflects the unique people we truly are. This is the heart and soul of simplicity.</p>
-                            </div>
+                    <div id="collapseFive" class="collapse width" data-parent="#accordionHorizontalExample" style="background-image: linear-gradient(90deg, #ebf0ec, white);">
+                        <div class="card-body">
+                            <p style="text-align: center;"><b>Grammar</b></p>
+                            <p style="text-align: justify;">
+                                <dl>
+                                    <dt>Prefix & Suffix Fish</dt>
+                                    <dd style="text-align: justify;">- students create whole fish for Roly to eat by combining common prefixes and suffixes with root words, such as"teach" and"power."</dd>
+                                </dl>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
-    <!-- Testimonials-->
+    <!-- Testimonials -->
     <section class="page-section bg-primary" id="testimonials">
         <h2 class="text-center mt-0">Testimonials</h2>
         <div class="container">
@@ -256,7 +259,7 @@
     </section>
 
     <!-- Contact-->
-    <section class="page-section" id="contact">
+    <section class="page-section text_style contact" id="contact">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
@@ -278,6 +281,30 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body bg_img" style="height: max-content;">
+                    <div style="padding-top: 190px; padding-left: 190px;">
+                        <table>
+                            <tr>
+                                <td><input type="text" id="login" placeholder="User Name" class="text_box_transparent text_style"> </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" id="password" placeholder="password" class="text_box_transparent text_style"></td>
+                                </td>
+                            </tr>
+                        </table>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
